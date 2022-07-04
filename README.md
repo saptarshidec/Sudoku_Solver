@@ -3,7 +3,7 @@ This is a Sudoku Solver application. It detects a Sudoku grid from an image usin
 
 ## Steps to Run:
 
-##### Run main.py
+#### Run main.py
 
-##### Run localhost:5000 on any web browser
+#### Run localhost:5000 on any web browser
 
