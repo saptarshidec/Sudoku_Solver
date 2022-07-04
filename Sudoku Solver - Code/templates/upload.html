@@ -1,0 +1,46 @@
+<!doctype html>
+ <title>Python Flask File Upload Example</title>
+
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='mystyle.css')}}">
+<h1 style="text-align:center;">Sudoku Solver</h1>
+<style>
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+  float: left;
+   width: 45%;
+   padding: 10px;
+}
+</style>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filenames %}
+	{% for filename in filenames %}
+		<div class="imageColumn">
+			<img width="500" height="500" src="{{ url_for('display_image', filename=filename) }}">
+		</div>
+	{% endfor %}
+{% endif %}
+<div style="float:left;display:inline-block;">
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+    		<p>
+    			<input type="file" name="file" autocomplete="off" required>
+    		</p>
+        </dl>
+        <p>
+    		<input type="submit" value="Submit">
+    	</p>
+    </form>
+</div>
