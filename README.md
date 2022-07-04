@@ -5,7 +5,7 @@ This is a Sudoku Solver application. It detects a Sudoku grid from an image usin
 
 ## Steps to Run:
 
-#### Run main.py
+#### Download the Sudoku Solver - Code folder and Run main.py
 
 #### Run localhost:5000 on any web browser
 
